@@ -24,7 +24,8 @@ class IANews(discord.Client):
 
         self.classifier = pipeline(
             "zero-shot-classification",
-            model="joeddav/xlm-roberta-large-xnli"
+            model="facebook/bart-large-mnli",
+            tokenizer="facebook/bart-large-mnli"
         )
 
     async def setup_hook(self):
